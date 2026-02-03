@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const nailImages = Array.from({ length: 46 }, (_, i) => ({
   id: i + 1,
@@ -44,6 +45,21 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Link Section */}
+      <section className="py-8 px-4 bg-gradient-to-b from-[#FCDBB8]/30 to-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <Link
+            href="/faq"
+            className="inline-flex items-center px-6 py-3 bg-[#F5A962] text-white rounded-full font-medium hover:bg-[#E08B3A] transition-colors"
+          >
+            よくある質問はこちら
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
 
